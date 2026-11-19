@@ -313,11 +313,6 @@ select.t{appearance:auto}
           <p class="lead">How do human cells age when gravity stops pulling?</p>
           <p>Every cell on Earth has evolved under a constant 1g mechanical load. Take it away and cells change their shape, their signaling, and how they age. In this ISRO collaboration you will grow human cells under simulated microgravity and find out what that does to aging. You will own the project end to end.</p>
         </div>
-        <div class="figs">
-          <figure><img src="media/vessels.jpg" alt="Two disc-shaped rotating wall vessels on a perforated incubator shelf, blurred by rotation, with a glass column between them"><figcaption><b>Fig. 1.</b> Rotating wall vessels in a time-lapse exposure during ground-based culture of human cells, 1998. Photo: NASA / MSFC</figcaption></figure>
-          <figure><img src="media/bead.jpg" alt="Micrograph of amber-tinted human cells clustered around a round microcarrier bead" style="object-position:30% 50%"><figcaption><b>Fig. 2.</b> Human cells aggregating on a microcarrier bead after 49 days in a rotating wall vessel. Photo: NASA / MSFC</figcaption></figure>
-          <figure><img src="media/colon.jpg" alt="A clear culture vessel filled with orange, cloud-like masses of cultured cells"><figcaption><b>Fig. 3.</b> Human cells grown in a bioreactor aboard Space Shuttle mission STS-70, 1995. Photo: NASA / MSFC</figcaption></figure>
-        </div>
       </div>
     </section>
 
@@ -981,10 +976,11 @@ if(REDUCED){ try{ $("heroVid").removeAttribute("autoplay"); $("heroVid").pause()
 /* ---------- scroll cue ---------- */
 (function(){
   var cue = $("cue");
-  var update = function(){ cue.classList.toggle("gone", window.scrollY > 60); };
+  var intro = null;
+  var update = function(){ var g = window.scrollY > 60; cue.classList.toggle("gone", g); if(g && intro){ intro.cancel(); intro = null; } };
   window.addEventListener("scroll", update, {passive:true}); update();
   cue.addEventListener("click", function(){ var t = document.querySelector("main .sec"); if(t) t.scrollIntoView({behavior: REDUCED ? "auto" : "smooth"}); });
-  if(!REDUCED && cue.animate) cue.animate([{opacity:0},{opacity:1}],{duration:900,delay:1800,fill:"backwards",easing:"ease-out"});
+  if(!REDUCED && cue.animate && window.scrollY <= 60) intro = cue.animate([{opacity:0},{opacity:1}],{duration:900,delay:1800,fill:"backwards",easing:"ease-out"});
 })();
 
 /* ---------- boot ---------- */
