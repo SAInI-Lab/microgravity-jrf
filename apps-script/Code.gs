@@ -82,7 +82,7 @@ function doPost(e) {
       replyTo: email,
       name: 'JRF applications',
       subject: 'JRF application' + rev + ': ' + name + ' [' + id + ']',
-      body: clean_(d.markdown, 45000) + '\n\n---\nReference ' + id + ', received ' + received + ' IST.\nSheet: ' + SpreadsheetApp.getActiveSpreadsheet().getUrl()
+      body: clean_(d.markdown, 45000) + '\n\n---\nReference ' + id + ', received ' + received + ' IST.\nSheet: ' + book_().getUrl()
     });
 
     if (CONFIG.confirmApplicant) {
