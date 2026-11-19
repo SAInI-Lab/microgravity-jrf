@@ -319,8 +319,8 @@ select.t{appearance:auto}
     <section class="sec">
       <div class="label">What you will do</div>
       <ol class="duties">
-        <li><h3>Culture</h3><p>Human cells in 2D and 3D on a random positioning machine and in rotating wall vessels, with 1g and device controls running alongside.</p></li>
-        <li><h3>Track aging</h3><p>Follow aging and senescence phenotypes over time, and design experiments that tell real effects from artefacts of the machine.</p></li>
+        <li><h3>Culture</h3><p>Human cells in 2D and 3D under simulated microgravity, with 1g controls running alongside.</p></li>
+        <li><h3>Track aging</h3><p>Follow aging and senescence phenotypes over time, and design experiments that tell real effects from artefacts.</p></li>
         <li><h3>Measure</h3><p>Molecular readouts such as qPCR, western blots, immunofluorescence and imaging, then whatever the biology asks for next.</p></li>
         <li><h3>Own</h3><p>Design, troubleshooting, analysis and writing. When something is stuck, you are the one who gets it moving.</p></li>
       </ol>
@@ -343,7 +343,7 @@ select.t{appearance:auto}
           <h3>Good to have</h3>
           <ul>
             <li>Senescence assays (SA-&beta;-gal, p16/p21, SASP)</li>
-            <li>3D culture, spheroids or bioreactors</li>
+            <li>3D culture or spheroids</li>
             <li>Microscopy and image analysis (Fiji/ImageJ)</li>
             <li>A habit of fixing and tinkering with instruments</li>
             <li>A qualified fellowship exam such as CSIR/UGC NET, GATE or DBT-BET</li>
@@ -440,10 +440,10 @@ var IMG = {
   sindia:  {src:"media/sindia.jpg",  pos:"28% 50%", cap:"The International Space Station above southern India at 1:34 a.m. local time, June 2026. Photo: NASA / Chris Williams"},
   airglow: {src:"media/airglow.jpg", pos:"40% 50%", cap:"Atmospheric glow over Earth's limb, from 262 miles above Kazakhstan, 2020. Photo: NASA"},
   sliver:  {src:"media/sliver.jpg",  pos:"68% 50%", cap:"The first moments of an orbital sunrise over the Pacific, 2024. Photo: NASA"},
-  vessels: {src:"media/vessels.jpg", pos:"26% 50%", cap:"Rotating wall vessels in a time-lapse exposure, 1998. Photo: NASA / MSFC"},
-  colon:   {src:"media/colon.jpg",   pos:"50% 50%", cap:"Human colon cancer cells grown in a bioreactor on STS-70, 1995. Photo: NASA / MSFC"},
-  bead:    {src:"media/bead.jpg",    pos:"30% 50%", cap:"Human breast tumor cells on a microcarrier bead after 49 days in a rotating wall vessel. Photo: NASA / MSFC"},
-  rwv:     {src:"media/rwv.jpg",     pos:"58% 40%", cap:"The rotating wall vessel at the heart of the NASA bioreactor, about 125 mL. Photo: NASA"},
+  vessels: {src:"media/vessels.jpg", pos:"26% 50%", cap:"Ground-based cell culture at NASA, 1998. Photo: NASA / MSFC"},
+  colon:   {src:"media/colon.jpg",   pos:"50% 50%", cap:"Human cells grown aboard Space Shuttle mission STS-70, 1995. Photo: NASA / MSFC"},
+  bead:    {src:"media/bead.jpg",    pos:"30% 50%", cap:"Human cells on a microcarrier bead after 49 days in culture. Photo: NASA / MSFC"},
+  rwv:     {src:"media/rwv.jpg",     pos:"58% 40%", cap:"A NASA cell culture vessel. Photo: NASA"},
   sunrise: {src:"media/sunrise.jpg", pos:"63% 50%", cap:"An orbital sunrise above Namibia, 2025. Photo: NASA"},
   delhi:   {src:"media/delhi.jpg",   pos:"52% 30%", cap:"New Delhi under Earth's atmospheric glow at 2:55 a.m. local time, 2025. Photo: NASA"},
   milky:   {src:"media/milky.jpg",   pos:"42% 50%", cap:"The Milky Way over Earth's limb, from above the Coral Sea, 2019. Photo: NASA"},
@@ -453,7 +453,7 @@ var IMG = {
 var Q = [
   {g:"Warm-up", img:"sliver", limit:150, t:"What is something you got unreasonably good at, or unreasonably obsessed with, that nobody asked you to? How did you go about it?"},
   {g:"Warm-up", img:"sliver", limit:100, t:"What is the last thing you fixed, built or took apart that was not technically yours to touch?"},
-  {g:"At the bench", img:"vessels", limit:150, t:"A random positioning machine reorients cells continuously so that the time-averaged gravity vector approaches zero. Name one way the machine itself, not the unloading, could change what the cells do. How would you tell the two apart?"},
+  {g:"At the bench", img:"vessels", limit:150, t:"Simulated microgravity works by reorienting cells continuously so that the time-averaged gravity vector approaches zero. Name one way the setup itself, not the unloading, could change what the cells do. How would you tell the two apart?"},
   {g:"At the bench", img:"colon", limit:150, t:"A striking aging phenotype shows up in simulated microgravity and vanishes at 1g. Your PI is thrilled. What are the first three things you check before you let yourself be thrilled too?"},
   {g:"At the bench", img:"bead", limit:150, t:"Your cells have looked “a bit off” for a week. Nothing is obviously wrong. Walk us through what you do, in order."},
   {g:"At the bench", img:"rwv", limit:200, t:"Describe an experiment of yours that failed. Skip the lesson you learned; tell us what you actually did in the 48 hours after you realised."},
