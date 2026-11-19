@@ -249,10 +249,27 @@ select.t{appearance:auto}
   .credit{position:relative;right:auto;bottom:auto;padding:0 20px 14px;text-align:left}
   .sec:first-child{padding-top:40px}
   .hero{min-height:0;justify-content:flex-start}
-  .hero-in{padding-top:clamp(150px,30vh,300px);padding-bottom:28px}
+  .hero-in{padding-top:clamp(120px,24vh,240px);padding-bottom:24px}
+  .sec{padding:36px 0;gap:12px}
+  .sec:first-child{padding-top:28px}
+  .prose p{font-size:18px}
+  .prose p.lead{font-size:27px;margin-bottom:.6em}
+  .figs{margin-top:24px;gap:14px;display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px;padding-right:20px;scrollbar-width:none}
+  .figs::-webkit-scrollbar{display:none}
+  .figs figure{scroll-snap-align:start}
+  .figs figure:first-child{grid-column:auto}
+  .figs figure img,.figs figure:first-child img{aspect-ratio:4/3}
+  .sec{padding:32px 0}
+  figcaption{margin-top:8px}
+  .duties li{padding:16px 0 18px}
+  .duties li:nth-child(2){padding-top:16px}
+  .duties h3,.skills h3{font-size:24px;margin-bottom:6px}
+  .skills{gap:24px}
+  .skills li{padding:10px 0;font-size:16.5px}
+  .apply .go{margin-top:22px}
+  footer{padding:28px 20px 40px}
 }
 @media (max-width:560px){
-  .figs{grid-template-columns:1fr}
   .logos{gap:14px}.logos .lab{padding-left:14px}
   .lg-iisc{height:27px}.lg-saini{height:40px}.lg-isro{height:42px}
 }
@@ -320,7 +337,7 @@ select.t{appearance:auto}
         <div>
           <h3>Must have</h3>
           <ul>
-            <li>A degree in life sciences, biotechnology, bioengineering or a related field</li>
+            <li>A master&rsquo;s degree, a four-year bachelor&rsquo;s degree, or a bachelor&rsquo;s degree with three years of experience, in life sciences, biotechnology, bioengineering or a related field</li>
             <li>Hands-on mammalian cell culture and sterile technique</li>
             <li>At least one of qPCR, western blotting or immunofluorescence</li>
             <li>A careful notebook: records someone else could repeat</li>
