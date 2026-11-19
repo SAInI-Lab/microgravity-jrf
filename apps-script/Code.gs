@@ -92,7 +92,7 @@ function doPost(e) {
         name: "SAInI's Lab, IISc",
         subject: 'We received your JRF application [' + id + ']',
         body: 'Hi ' + name.split(' ')[0] + ',\n\n' +
-          'Your application for the Junior Research Fellowship (aging, microgravity and drug screening; ISRO collaboration) reached us on ' + received + ' IST.\n\n' +
+          'Your application for the Junior Research Fellowship (aging in simulated microgravity; ISRO collaboration) reached us on ' + received + ' IST.\n\n' +
           'Reference: ' + id + '\n\n' +
           'If you edit your answers and launch again, we keep only the latest version. We read every application ourselves.\n\n' +
           "SAInI's Lab, Indian Institute of Science, Bengaluru\n\n" +

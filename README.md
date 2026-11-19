@@ -1,4 +1,4 @@
-# JRF application: aging, microgravity and drug screening
+# JRF application: aging in simulated microgravity
 
 Application site for a Junior Research Fellowship at [SAInI's Lab](https://sites.google.com/site/sainislab/home), Indian Institute of Science, Bengaluru (ISRO collaboration).
 
