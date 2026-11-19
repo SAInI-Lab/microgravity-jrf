@@ -109,8 +109,19 @@ function doPost(e) {
 }
 
 /* ---------- helpers ---------- */
+function book_() {
+  // Works whether the script is attached to a Sheet or standalone.
+  const active = SpreadsheetApp.getActiveSpreadsheet();
+  if (active) return active;
+  const props = PropertiesService.getScriptProperties();
+  const id = props.getProperty('SHEET_ID');
+  if (id) return SpreadsheetApp.openById(id);
+  const created = SpreadsheetApp.create('JRF applications (microgravity)');
+  props.setProperty('SHEET_ID', created.getId());
+  return created;
+}
 function sheet_() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = book_();
   let sh = ss.getSheetByName(CONFIG.sheetName);
   if (!sh) sh = ss.insertSheet(CONFIG.sheetName);
   if (sh.getLastRow() === 0) {
@@ -134,5 +145,5 @@ function json_(o) { return ContentService.createTextOutput(JSON.stringify(o)).se
 function setup() {
   sheet_();
   MailApp.getRemainingDailyQuota();
-  console.log('Ready. Sheet: ' + SpreadsheetApp.getActiveSpreadsheet().getUrl());
+  console.log('Ready. Sheet: ' + book_().getUrl());
 }
